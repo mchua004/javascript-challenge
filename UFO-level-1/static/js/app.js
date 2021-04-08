@@ -7,7 +7,7 @@ var tbody = d3.select("tbody");
 data.forEach(function(ufoSighting) {
     // console.log each object in UFO dataset
     console.log(ufoSighting);
-    
+
     // append one table row 'tr' for each UFO object
     var row = tbody.append("tr");
 
@@ -17,5 +17,6 @@ data.forEach(function(ufoSighting) {
 
         // append a cell in table row for each value in each object
         var cell = row.append("td");
+        cell.text(value);
     });
 });
