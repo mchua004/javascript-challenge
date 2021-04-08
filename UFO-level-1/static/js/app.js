@@ -6,4 +6,5 @@ var tbody = d3.select("tbody");
 
 data.forEach(function(ufoSighting) {
     console.log(ufoSighting);
+    var row = tbody.append("tr");
 });
