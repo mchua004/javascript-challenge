@@ -22,14 +22,14 @@ data.forEach(function(ufoSighting) {
 });
 
 // Select the filter form
-var filter = d3.select("#form");
+var form = d3.select("#form");
 
 // Select the button
 var button = d3.select("#filter-btn");
 
 // Create event handlers for clicking the button or pressing the enter key
 button.on("click", runEnter);
-filter.on("submit", runEnter);
+form.on("submit", runEnter);
 
 // Create the function to run for both events
 function runEnter() {
