@@ -42,7 +42,20 @@ function runEnter() {
   
     // Get the value property of the input element
     var inputValue = inputElement.property("value");
+
+    var filteredData = tableData.filter(sighting => sighting.datetime === inputValue);
+
+    tbody.html("");
+
+    // Loop through array of objects then each object
+    filteredData.forEach((object) => {
+        var row = tbody.append("tr");
+
+        // Get the entries for each object in the array
+        Object.entries(object).forEach(([key, value]) => {
+            var cell = row.append("td");
+            cell.text(value);
+        });
+    });
   
-    // Print the value to the console
-    console.log(inputValue);    
-}
+};
